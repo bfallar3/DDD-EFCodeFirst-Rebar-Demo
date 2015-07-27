@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BA33C5F-834B-4ED5-8818-B2CF46FDE741}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdventureWorksEntities</RootNamespace>
+    <AssemblyName>AdventureWorksEntities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdventureWorksContext.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdvWorks.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AwBuildVersion.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AwBuildVersionConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="DatabaseLog.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseLogConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLog.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLogConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FakeAdventureWorksContext.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FakeDbSet.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_Department.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_DepartmentConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_Employee.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_EmployeeConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_EmployeeDepartmentHistory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_EmployeeDepartmentHistoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_EmployeePayHistory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_EmployeePayHistoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_JobCandidate.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_JobCandidateConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_Shift.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_ShiftConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VEmployee.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VEmployeeConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VEmployeeDepartment.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VEmployeeDepartmentConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VEmployeeDepartmentHistory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VEmployeeDepartmentHistoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VJobCandidate.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VJobCandidateConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VJobCandidateEducation.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VJobCandidateEducationConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VJobCandidateEmployment.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources_VJobCandidateEmploymentConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IAdventureWorksContext.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_Address.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_AddressConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_AddressType.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_AddressTypeConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_BusinessEntity.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_BusinessEntityAddress.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_BusinessEntityAddressConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_BusinessEntityConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_BusinessEntityContact.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_BusinessEntityContactConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_ContactType.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_ContactTypeConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_CountryRegion.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_CountryRegionConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_EmailAddress.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_EmailAddressConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_Password.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_PasswordConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_Person.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_PersonConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_PersonPhone.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_PersonPhoneConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_PhoneNumberType.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_PhoneNumberTypeConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_StateProvince.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_StateProvinceConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_VAdditionalContactInfo.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_VAdditionalContactInfoConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_VStateProvinceCountryRegion.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_VStateProvinceCountryRegionConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_BillOfMaterial.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_BillOfMaterialConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_Culture.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_CultureConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_Document.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_DocumentConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_Illustration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_IllustrationConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_Location.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_LocationConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_Product.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductCategory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductCategoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductCostHistory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductCostHistoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductDescription.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductDescriptionConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductDocument.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductDocumentConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductInventory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductInventoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductListPriceHistory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductListPriceHistoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductModel.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductModelConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductModelIllustration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductModelIllustrationConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductModelProductDescriptionCulture.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductModelProductDescriptionCultureConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductPhoto.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductPhotoConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductProductPhoto.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductProductPhotoConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductReview.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductReviewConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductSubcategory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ProductSubcategoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ScrapReason.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_ScrapReasonConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_TransactionHistory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_TransactionHistoryArchive.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_TransactionHistoryArchiveConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_TransactionHistoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_UnitMeasure.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_UnitMeasureConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_VProductAndDescription.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_VProductAndDescriptionConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_VProductModelCatalogDescription.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_VProductModelCatalogDescriptionConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_VProductModelInstruction.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_VProductModelInstructionConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_WorkOrder.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_WorkOrderConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_WorkOrderRouting.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production_WorkOrderRoutingConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchasing_ProductVendor.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_ProductVendorConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_PurchaseOrderDetail.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_PurchaseOrderDetailConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_PurchaseOrderHeader.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_PurchaseOrderHeaderConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_ShipMethod.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_ShipMethodConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_Vendor.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_VendorConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_VVendorWithAddress.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_VVendorWithAddressConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_VVendorWithContact.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing_VVendorWithContactConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_CountryRegionCurrency.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_CountryRegionCurrencyConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_CreditCard.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_CreditCardConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Currency.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_CurrencyConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_CurrencyRate.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_CurrencyRateConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Customer.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_CustomerConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_PersonCreditCard.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_PersonCreditCardConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesOrderDetail.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesOrderDetailConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesOrderHeader.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesOrderHeaderConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesOrderHeaderSalesReason.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesOrderHeaderSalesReasonConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesPerson.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesPersonConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesPersonQuotaHistory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesPersonQuotaHistoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesReason.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesReasonConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesTaxRate.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesTaxRateConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesTerritory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesTerritoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesTerritoryHistory.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SalesTerritoryHistoryConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_ShoppingCartItem.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_ShoppingCartItemConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SpecialOffer.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SpecialOfferConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SpecialOfferProduct.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_SpecialOfferProductConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Store.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_StoreConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VIndividualCustomer.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VIndividualCustomerConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VPersonDemographic.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VPersonDemographicConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VSalesPerson.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VSalesPersonConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VSalesPersonSalesByFiscalYear.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VSalesPersonSalesByFiscalYearConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VStoreWithAddress.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VStoreWithAddressConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VStoreWithContact.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VStoreWithContactConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VStoreWithDemographic.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_VStoreWithDemographicConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sysdiagram.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SysdiagramConfiguration.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UspGetBillOfMaterialsReturnModel.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UspGetEmployeeManagersReturnModel.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UspGetManagerEmployeesReturnModel.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UspGetWhereUsedProductIdReturnModel.cs">
+      <DependentUpon>AdvWorks.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AdvWorks.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdvWorks.cs</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="EF.Reverse.POCO.Core.ttinclude" />
+    <None Include="EF.Reverse.POCO.ttinclude" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
